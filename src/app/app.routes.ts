@@ -12,7 +12,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'inputbox',
+    redirectTo: 'home',
     pathMatch: 'full',
   },
   {
