@@ -7,37 +7,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)" mode="ios">
-    <!-- <ion-refresher-content></ion-refresher-content> -->
-  </ion-refresher>
-
-  <span hidden id="btnText">This is a test for aria-describedby</span>
-  <ion-button aria-describedby="btnText">Aria Test</ion-button>
 
 
-  <ion-list>
-    <ion-item>
-      <ion-select value="apple" aria-describedby="selectText">
-        <span id="selectText" class="sr-only">This is an ion select</span>
-        <ion-select-option value="apple">Apple</ion-select-option>
-        <ion-select-option value="banana">Banana</ion-select-option>
-        <ion-select-option value="orange">Orange</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
+  <span hidden id="btnText">This is a test for click event on readonly </span>
+  <ion-input label="Start Date" placeholder="Enter Start Date" type="text" [readonly]="true"
+    id="start-date-modal"></ion-input>
 
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">
-        Inbox
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-list>
-    @for (message of getMessages(); track message) {
-      <app-message [message]="message"></app-message>
-    }
-  </ion-list>
-  <ion-button>Default</ion-button>
+  <ion-modal #startdatemodal trigger="start-date-modal" [cssClass]="'custom-calendar'">
+    <ng-template>
+      <h2>This is a test modal</h2>
+    </ng-template>
+  </ion-modal>
 </ion-content>
