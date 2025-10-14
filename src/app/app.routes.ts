@@ -11,9 +11,18 @@ export const routes: Routes = [
       import('./view-message/view-message.page').then((m) => m.ViewMessagePage),
   },
   {
+    path: 'ionselect',
+    loadComponent: () => import('./ion-select/ion-select.page').then((m) => m.IonSelectPage),
+  },
+  // {
+  //   path: '',
+  //   redirectTo: 'home',
+  //   pathMatch: 'full',
+  // },
+  {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
+    redirectTo: 'ionselect',
+    pathMatch: 'full'
   },
   {
     path: 'inputbox',
