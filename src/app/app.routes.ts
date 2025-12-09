@@ -11,22 +11,9 @@ export const routes: Routes = [
       import('./view-message/view-message.page').then((m) => m.ViewMessagePage),
   },
   {
-    path: 'ionselect',
-    loadComponent: () => import('./ion-select/ion-select.page').then((m) => m.IonSelectPage),
-  },
-  // {
-  //   path: '',
-  //   redirectTo: 'home',
-  //   pathMatch: 'full',
-  // },
-  {
     path: '',
-    redirectTo: 'ionselect',
-    pathMatch: 'full'
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
-  {
-    path: 'inputbox',
-    loadComponent: () => import('./inputbox/inputbox.page').then( m => m.InputboxPage)
-  }
 ];
 

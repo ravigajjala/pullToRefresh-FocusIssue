@@ -1,8 +1,0 @@
-<div class="select-container">
-    <ion-select id="customActionSheetSelect" interface="action-sheet" placeholder="Select Month">
-        @for (month of monthsList; track month) {
-            <ion-select-option [attr.id]="'monthOption_'+month.id" [value]="month.id" [innerHTML]="month.name"
-                [attr.aria-label]="month.name"></ion-select-option>
-        }
-    </ion-select>
-</div>

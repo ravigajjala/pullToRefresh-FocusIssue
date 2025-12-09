@@ -2,7 +2,7 @@
 import { Component, inject } from '@angular/core';
 import {
   RefresherCustomEvent, IonHeader, IonToolbar, IonTitle, IonContent,
-  IonRefresher, IonRefresherContent, IonList, IonButton, LoadingController, IonSelect, IonSelectOption, IonItem
+  IonRefresher, IonRefresherContent, IonList, IonButton, LoadingController, IonSelect, IonSelectOption, IonItem, IonInput, IonIcon
 } from '@ionic/angular/standalone';
 import { MessageComponent } from '../message/message.component';
 
@@ -13,7 +13,7 @@ import { DataService, Message } from '../services/data.service';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonRefresher, IonRefresherContent, IonList, MessageComponent, IonButton, IonSelect,
-    IonSelectOption, IonItem, IonList],
+    IonSelectOption, IonItem, IonList, IonInput, IonIcon],
 })
 export class HomePage {
   private data = inject(DataService);
